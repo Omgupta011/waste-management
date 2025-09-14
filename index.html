@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Waste Dashboard</title>
+  <link rel="stylesheet" href="WM.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="WM.js" defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5Gw9XEqsGL6lPjLxk9eGDBvV8JXR1DOc&callback=initMap" async defer></script>
+</head>
+<body>
+  <header>
+  <nav class="navbar">
+    <div class="logo">♻ SmartWaste</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a class= navicon href="#home">🏠 Home</a></li>
+      <li><a class= navicon href="#dashboard">📊 Dashboard</a></li>
+      <li><a class= navicon href="#training">🎓 Training</a></li>
+      <li><a class= navicon href="#stories">📖 Stories</a></li>
+      <li><a class= navicon href="#leaderboard">🏅 Leaderboard</a></li>
+      <li><a class= navicon href="#contact">📞 Contact</a></li>
+    </ul>
+
+     <!-- Profile Icon with Dropdown -->
+    <div class="profile-menu">
+      <div class="profile-icon" id="profileIcon">👤</div>
+      <ul class="dropdown" id="dropdownMenu">
+        <li><a href="#account">👤 Account</a></li>
+        <li><a href="#contribution">📊 Contribution</a></li>
+        <li><a href="#certificates">🎓 Certificates</a></li>
+        <li><a href="#history">🕒 History</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+  </nav>
+</header>
+
+  
+  <div class="dashboard">
+    <h1>♻ Smart Waste Management Dashboard</h1>
+    <div class="cards">
+
+      <div class="card">
+        <h2>Waste Segregation Stats</h2>
+        <canvas id="wasteChart" width="300" height="300"></canvas>
+      </div>
+
+      
+      <div class="card">
+        <h2>Report Dumping</h2>
+        <p>Report illegal dumping with location.</p>
+        <button>Report</button>
+      </div>
+
+      <div class="card">
+        <h2>Incentives</h2>
+        <p>Earn points & get rewards for participation.</p>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+        <p><b>66%</b> citizens active</p>
+      </div>
+
+      <div class="card">
+        <h2>Green Champion</h2>
+        <p>Leaderboard of top contributors:</p>
+        <ul>
+          <li>🏆 Aman - 120 pts</li>
+          <li>🥈 Neha - 110 pts</li>
+          <li>🥉 Ravi - 100 pts</li>
+          
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Facilities Map</h2>
+        <input id="pac-input" class="controls" type="text" placeholder="Search location..." />
+        <div id="map"></div>
+      </div>
+
+
+      <div class="training-section">
+    <h3>Citizen Training 📘</h3>
+    <ul>
+      <li>Learn to segregate wet and dry waste.</li>
+      <li>Understand recyclable vs non-recyclable items.</li>
+      <li>Attend local community cleanliness drives.</li>
+      <li>Watch: <a href="https://youtu.be/example" target="_blank">Waste Segregation Video</a></li>
+    </ul>
+  </div>
+      
+     <div class="stories-section">
+  <h3>Citizen Stories 🌍</h3>
+  <div id="storiesList">
+    <p><b>Mahi from Delhi:</b> Started a recycling drive in his colony.</p>
+    <p><b>Harshita from Mumbai:</b> Educated kids about waste segregation.</p>
+  </div>
+  
+  <textarea id="storyInput" placeholder="Share your story..."></textarea>
+  <button onclick="addStory()">Submit Story</button>
+</div>
+
+      <div class="quotes-section">
+        <h3>Eco Quotes 🌱</h3>
+        <p id="quoteText">Loading quote...</p>
+        <button onclick="newQuote()">Next Quote</button>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>♻ SmartWaste</h3>
+      <p>Building cleaner and greener cities with technology, rewards, and citizen power.</p>
+    </div>
+
+    
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>📍 Jodhpur, India</p>
+      <p>📧 support@smartwaste.in</p>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <a href="#">🌐 Facebook</a><br>
+      <a href="#">🐦 Twitter</a><br>
+      <a href="#">💼 LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 SmartWaste | Clean City, Green Future 🌍</p>
+  </div>
+</footer>
+</body>
+</html>
